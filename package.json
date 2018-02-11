@@ -4,7 +4,7 @@
   "author": "Ragnar Rognstad (http://rognstad.me)",
   "repository": "rognstadragnar/mehlm",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "source": "src/main.ts",
   "typings": "dist/index.d.ts",
   "main": "dist/mehlm.js",
@@ -21,13 +21,15 @@
     "mehdux": "*"
   },
   "scripts": {
-    "release":
-      "npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish",
+    "release": "npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish",
     "bundle:main": "microbundle",
     "dev:main": "microbundle watch",
     "prepare": "npm run build",
     "build": "npm run bundle:main",
     "test": "echo 'should add some tests.. :)'"
   },
-  "files": ["src", "dist"]
+  "files": [
+    "src",
+    "dist"
+  ]
 }
