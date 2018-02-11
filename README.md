@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/rognstadragnar/mehlm/master/mehlm.jpg" alt="mehdux">
+  <img src="https://raw.githubusercontent.com/rognstadragnar/mehlm/master/logo.jpg" alt="mehlm">
 </div>
 
 # mehlm
