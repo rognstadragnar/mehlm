@@ -1,7 +1,16 @@
 import { Store } from 'mehdux'
-import { h, patch } from 'picodom'
+import { h, patch, VNode } from 'picodom'
 
-const Mehlm = opts => {
+import {
+  MehlmOptions,
+  StoreInstance,
+  MapStateToProps,
+  MapActionsToProps,
+  ComponentProps,
+  ConnectProps
+} from './types'
+
+const Mehlm = (opts: MehlmOptions) => {
   const {
     mapStateToProps,
     mapActionsToProps,
@@ -17,7 +26,7 @@ const Mehlm = opts => {
     storeInstance = new Store(state, actions)
   }
 
-  let node
+  let node: VNode<object> | null = null
   const render = (mappedProps, mappedActions) => {
     patch(node, (node = view(mappedProps, mappedActions, store)), rootElm)
   }
@@ -30,14 +39,16 @@ const Mehlm = opts => {
   return { destroy: () => dispose() }
 }
 
-function connect(mapState, mapActions) {
-  return component => props => {
+function connect(mapState?: MapStateToProps, mapActions?: MapActionsToProps) {
+  return (component: (props: object) => VNode<ComponentProps>) => (
+    props: ConnectProps
+  ) => {
     const { store: storeInstance } = props
-    const propsFromState = () => ({
+    const propsFromState = (): object => ({
       ...storeInstance.getState(mapState),
       ...storeInstance.getActions(mapActions)
     })
-    return component({ ...propsFromState(), ...props, lol: 'lol' })
+    return component({ ...propsFromState(), ...props })
   }
 }
 

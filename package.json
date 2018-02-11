@@ -6,6 +6,7 @@
   "license": "MIT",
   "version": "0.2.19",
   "source": "src/main.ts",
+  "typings": "dist/index.d.ts",
   "main": "dist/mehlm.js",
   "module": "dist/mehlm.esm.js",
   "browser": "dist/mehlm.umd.js",
