@@ -2,9 +2,6 @@
   <img src="https://raw.githubusercontent.com/rognstadragnar/mehlm/master/mehlm.jpg" alt="mehdux">
 </div>
 
-
-https://github.com/rognstadragnar/mehlm/blob/master/mehlm.jpg
-
 # mehlm
 
 > Just another tiny, simple framework
