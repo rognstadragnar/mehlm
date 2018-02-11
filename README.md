@@ -12,8 +12,8 @@
 
 ```Javascript
 /** @jsx h */
-import { h, patch } from 'picodom';
-import { Render } from 'mehlm';
+import { h } from 'picodom';
+import { render } from 'mehlm';
 
 function view(state, actions, storeInstance) {
   return <h1>{state.value}</h1>;
@@ -33,7 +33,7 @@ const App = {
   rootElm: document.querySelector('.app')
 };
 
-Render(App);
+render(App);
 ```
 
 #### The app object can have the following properties:
@@ -52,7 +52,10 @@ Render(App);
 Mehlm also support components being connect to the main store, with other `mapStateToProps` and `mapActionsToProps` functions.
 
 ```Javascript
-// import
+/** @jsx h */
+import { h } from 'picodom';
+import { render, connect } from 'mehlm';
+
 
 const AwesomeButton = ({ state, actions }) => {
   return <button onclick={actions.inc}>{state.value}</button>

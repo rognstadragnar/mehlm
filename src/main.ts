@@ -52,4 +52,4 @@ function connect(mapState?: MapStateToProps, mapActions?: MapActionsToProps) {
   }
 }
 
-export { Mehlm, Mehlm as Render, connect }
+export { Mehlm, Mehlm as render, connect }
