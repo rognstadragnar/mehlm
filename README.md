@@ -1,6 +1,9 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/rognstadragnar/rognstadragnar/mehlm/mehlm.jpg" alt="mehdux">
+  <img src="https://raw.githubusercontent.com/rognstadragnar/mehlm/master/mehlm.jpg" alt="mehdux">
 </div>
+
+
+https://github.com/rognstadragnar/mehlm/blob/master/mehlm.jpg
 
 # mehlm
 
