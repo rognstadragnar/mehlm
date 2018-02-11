@@ -6,6 +6,5 @@
 
 > Just another tiny, simple framework
 
-* Easy to grasp API
-* Tiny
+* Clocking in at a tiny 430 bytes ⚖️
 * Uses Picodom and Mehdux under the hood

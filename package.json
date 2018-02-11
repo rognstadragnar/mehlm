@@ -1,42 +1,32 @@
 {
-  "name": "mehdux",
+  "name": "mehlm",
   "description": "A straight forward state container",
   "author": "Ragnar Rognstad (http://rognstad.me)",
-  "repository": "rognstadragnar/mehdux",
+  "repository": "rognstadragnar/mehlm",
   "license": "MIT",
   "version": "0.2.19",
-  "source": "src/rewrite/main.ts",
-  "main": "dist/mehdux.js",
-  "module": "dist/mehdux.esm.js",
-  "browser": "dist/mehdux.umd.js",
+  "source": "src/main.ts",
+  "main": "dist/mehlm.js",
+  "module": "dist/mehlm.esm.js",
+  "browser": "dist/mehlm.umd.js",
   "devDependencies": {
+    "mehdux": "^0.2.20",
     "microbundle": "^0.4.3",
-    "preact": "^8.2.7",
-    "react": "^16.2.0",
+    "picodom": "^1.0.2",
     "tslint": "^5.9.1"
   },
   "peerDependencies": {
-    "preact": "*",
-    "react": "*"
+    "picodom": "*",
+    "mehdux": "*"
   },
   "scripts": {
-    "release": "npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish",
+    "release":
+      "npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish",
     "bundle:main": "microbundle",
     "dev:main": "microbundle watch",
-    "bundle:combine": "microbundle src/combine.ts -o ./combine.js -f cjs",
-    "bundle:picodom": "microbundle src/bindings/picodom.ts -o ./picodom.js -f cjs",
-    "bundle:preact": "microbundle src/bindings/preact.js -o ./preact.js -f cjs",
-    "bundle:react": "microbundle src/bindings/react.js -o ./react.js -f cjs",
     "prepare": "npm run build",
-    "build": "npm run bundle:main && npm run bundle:combine && npm run bundle:picodom && npm run bundle:preact && npm run bundle:react",
+    "build": "npm run bundle:main",
     "test": "echo 'should add some tests.. :)'"
   },
-  "files": [
-    "src",
-    "dist",
-    "react.js",
-    "react.js.map",
-    "preact.js",
-    "preact.js.map"
-  ]
+  "files": ["src", "dist"]
 }
